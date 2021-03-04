@@ -1,8 +1,11 @@
-const arr1 = [1,1,0];
+const Matrix = require('./Matrix');
+
+const arr1 = [[1,0]];
 
 function magic(arr) {
     const matrix =  new Matrix(arr);
-    const result = matrix.calculateRiverLengths();
+    matrix.buildCellMatrix();
+    const result = matrix.getRiverLengths();
     // result = [1,1,2];
     return result;
 }
